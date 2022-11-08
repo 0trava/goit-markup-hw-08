@@ -1,0 +1,51 @@
+/* Секція - Чим ми займаємося */
+
+  .section-caption{
+    padding-bottom: 94px;
+
+    &--overlay{
+        position: absolute;
+        left: 50%;
+        bottom: 27px;
+        transform: translate(-50%) ;
+      
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $second-text-color;
+      
+      }
+  }
+
+
+.section-caption__title {
+    @extend %section-title;
+  }
+
+
+
+  .section-caption__img{
+    display: flex;
+
+    .section-caption__item + .section-caption__item{
+        margin-left: 30px;
+      }
+
+  }
+
+
+.section-caption__box{
+  position: relative;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    content: "";
+    bottom: 0;
+   
+    background: $cap-box-before;
+  }
+}

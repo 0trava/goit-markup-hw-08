@@ -1,0 +1,141 @@
+/* --------main portfolio-------- */
+
+.section-portfolio__button-list{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 50px;
+
+    li + li{
+        margin-left: 8px;
+      }
+  }
+
+
+  .section-portfolio__list{
+    display: flex;
+    flex-wrap: wrap;
+
+    .section-portfolio__item{
+      width: 370px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      background: $second-text-color;
+      border: 1px solid $border-portfolio;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      } 
+
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      } 
+
+      &:hover, 
+      &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      
+        .section-portfolio--overlay, 
+        .section-portfolio__box::before {
+          transform: translateY(0);
+        }
+               
+      
+      }
+
+
+    }
+  }
+
+  .section-portfolio{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: $second-text-color;
+
+    a{
+      text-decoration: none;
+    }
+
+    &--overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  
+      background: $form-second-color;
+  
+      transform: translateY(101%);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+      > p{
+        width: 322px;
+        height: 160px;
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        font-size: 18px;
+        line-height: 1.56;   
+        letter-spacing: 0.03em;
+        
+        color: $second-text-color;
+      }
+  
+    }
+  
+  }
+
+
+  .section-portfolio__headline {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $primary-text-color;
+  
+  }
+
+  .section-portfolio__list > li > .section-portfolio__item:hover
+  .section-portfolio__list > li > .section-portfolio__item:focus{
+    cursor: pointer;
+    
+  }
+
+
+  .section-portfolio__quote{
+    padding-top: 4px;
+
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    color: $title-text-color;
+  }
+
+
+
+
+  .section-portfolio__text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+  }
+
+  /* Позиційні елементи */
+
+  .section-portfolio__box{
+    position: relative;
+    overflow: hidden;
+
+
+  }
+
+ 
+
+
+
+

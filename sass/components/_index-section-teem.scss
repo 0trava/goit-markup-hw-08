@@ -1,0 +1,50 @@
+
+
+.section-teem__title {
+    @extend %section-title;
+  }
+
+  
+  .section-teem {
+    background: $third-background;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .section-teem__list{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0;
+    margin-left: 0;
+  
+    .section-teem__item {
+        background-color: $second-text-color; 
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+       }
+  
+  }
+
+  .section-teem__blok{
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .section-teem__lead {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+
+  .section-teem__post {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+    
+  }

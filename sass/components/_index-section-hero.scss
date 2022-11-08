@@ -1,0 +1,36 @@
+/* Головний банер */
+
+.section-hero{
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+      to right,
+      $hero-background, 
+      $hero-background), 
+      url("../images/img-hero.jpg");
+
+    background-color: $second-background;
+
+
+  }
+
+  .section-hero--center{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+
+    > h1 {
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $second-text-color;
+      }
+  }
+
+  .section-hero__title{
+    margin-bottom: 30px;
+  }

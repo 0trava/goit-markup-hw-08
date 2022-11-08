@@ -1,0 +1,210 @@
+/* --------Форма: Залиште свої дані ------------*/
+
+.form{
+    width: 448px;
+    margin: 40px;
+
+    a {
+        text-decoration: none;
+    }
+  }
+  
+.form__field, .form__comment {
+    display: flex;
+    flex-direction: column;
+  
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+  
+  
+    letter-spacing: 0.01em;
+    color: $title-text-color;
+}
+  
+.form__field input{
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+  
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder{
+  
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+      
+        color: $text-form-placeholder;
+      }
+
+}
+  
+  
+  
+.form__textarea{
+  
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+   
+    resize: none; 
+    width: 448px;
+    height: 120px;
+  
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder{
+        color: $text-form-placeholder;
+      }
+}
+  
+.form__label {
+    margin-bottom: 4px;
+}
+    
+
+  
+.form__title{
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+  
+.form-comment{
+    display: flex;
+    flex-direction: column;
+}
+  
+ 
+  
+  .form__icon {
+    position: relative;
+    flex-direction: column;
+
+    input{
+        width: 448px;
+      }
+
+    svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate( 0%, -50%);
+  
+    margin-left: 15px;
+    box-sizing: border-box;
+    }  
+  }
+
+
+  input:focus-visible, textarea:focus-visible {
+    outline: 1px solid $accent-color;
+    border-radius: 3px;
+  }
+  
+  .form-subscription:focus-visible{
+    color: $footer-text-color;
+  }
+
+  
+/* ховаемо чекбокс */
+
+.form__checkbox{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  
+    color: $title-text-color;
+    appearance: none;
+
+    > label{
+        @extend %flex-center;
+      }
+
+    a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+      
+        letter-spacing: 0.03em;
+        color: $form-second-color;
+        border-bottom: 1px solid $form-second-color;
+      
+      }
+    
+  }
+  
+  
+  .form__checkbox-icon{
+    display: inline-block;
+    position: relative;
+    height: 15px;
+    width: 16px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    ;
+    border-radius: 4px;
+    margin-right: 7px;
+    margin-left: 12px;
+  }
+  
+  
+  .form__checkbox-thumb{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  
+    background-origin: border-box;
+    z-index: 0; 
+  }
+  
+  
+  
+  .form__checkbox:checked + .form__checkbox-icon{
+    background: $accent-color;
+    border-color: $accent-color;
+    background-origin: border-box;
+    z-index: 1;
+  
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    z-index 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  
+  
+  .form__field:focus input, .form__field:hover input,
+   .form__field:active input, .form__field:hover svg,
+   .form__comment:focus textarea, .form__comment:hover textarea  {
+    border-color: $form-second-color;
+    fill:$accent-color; 
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  

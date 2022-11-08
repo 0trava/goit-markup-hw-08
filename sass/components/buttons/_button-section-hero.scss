@@ -1,0 +1,29 @@
+.section-hero__button {
+
+    cursor: pointer;
+    min-width: 216px;
+    height: 50px; 
+    background: $accent-color;
+    border:none;
+    border-radius: 4px;
+    font-style: normal;
+    font-family: inherit;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    color: $second-text-color;
+    box-shadow: none;
+  
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, 
+    &:focus{
+        background: $button-background;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      }
+  
+    }
+  

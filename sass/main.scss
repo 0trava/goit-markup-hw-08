@@ -1,0 +1,60 @@
+@import "./utils/variables";
+@import "./components/normalize";
+@import "./utils/placeholder";
+
+//   --------Header--------
+@import "./components/container";
+@import "./components/logo";
+@import "./components/page-header";
+
+
+// ------------Сторінка СТУДІЯ----------
+
+// section hero
+
+@import "./components/index-section-hero";
+@import "./components/buttons/button-section-hero";
+
+// section-benefits
+
+@import "./components/index-section-benefits";
+
+// section-caption
+
+@import "./components/index-section-caption";
+
+// section-teem
+
+@import "./components/index-section-teem";
+@import "./components/block-socials-icons";
+
+// section-client
+
+@import "./components/index-section-client";
+
+// footer
+
+@import "./components/page_footer";
+@import "./components/footer-subscription";
+@import "./components/buttons/button-footer-subscriotion";
+
+// Модальне вікно
+
+@import "./components/index-modal-window";
+@import "./components/buttons/button-form-closed";
+@import "./components/form-leave-your-data";
+@import "./components/buttons/button-form-submit";
+
+// -------------Сторінка Портфоліо---------
+
+@import "./components/portfolio-section-list";
+@import "./components/buttons/buttons-page-portfolio";
+
+
+
+
+
+
+
+
+
