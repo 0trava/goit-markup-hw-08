@@ -20,3 +20,19 @@
     font-weight: 700;
     letter-spacing: 0.03em;
 }
+
+%section-title-mobile{
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.17;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }

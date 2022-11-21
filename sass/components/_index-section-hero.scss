@@ -1,33 +1,93 @@
 /* Головний банер */
 
 .section-hero{
-    max-width: 1600px;
-    height: 600px;
+    max-width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
       to right,
       $hero-background, 
       $hero-background), 
-      url("../images/img-hero.jpg");
+      url("../images/hero-mob.jpg");
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+          to right,
+          $hero-background, 
+          $hero-background), 
+          url("../images/hero-mob-2x.jpg");
+      }
 
     background-color: $second-background;
 
+    @media screen and (min-width: $tablet) {
+      max-width: 768px;
+      background-image: linear-gradient(
+        to right,
+        $hero-background, 
+        $hero-background), 
+        url("../images/hero-tab.jpg");
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+            to right,
+            $hero-background, 
+            $hero-background), 
+            url("../images/hero-tab-2x.jpg");
+        }
+    }
+
+
+    @media screen and (min-width: $desktop) {
+      max-width: 1600px;
+      height: 600px;
+      background-image: linear-gradient(
+        to right,
+        $hero-background, 
+        $hero-background), 
+        url("../images/img-hero.jpg");
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+            to right,
+            $hero-background, 
+            $hero-background), 
+            url("../images/hero-img-2x.jpg");
+        }
+    }
 
   }
 
   .section-hero--center{
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
 
     > h1 {
         font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
+        font-size: 26px;
+        line-height: 1.62;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $second-text-color;
+
+      @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+      }
+
       }
   }
 

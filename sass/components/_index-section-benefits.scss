@@ -1,29 +1,75 @@
 /* Секція - Головні переваги */
 .section-benefits{
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
+  }
     
   }
-  .section-benefits__list{
-    display: flex;
 
-    > .section-benefits__item{
-        width: 270px;
+
+  .section-benefits__list{
+    display: block;
+
+    .section-benefits__item{
+      max-width: 450px;
+    }
+    
+
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .section-benefits__item{
+        width: 354px;
+
+        &:nth-child(2n){
+          margin-left: 30px;
+        }
       }
 
-      .section-benefits__item +.section-benefits__item{
-        margin-left: 30px;
-      }  
+
+      
+    }
+
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+
+
+      > .section-benefits__item{
+          width: 270px;
+        }
+  
+        .section-benefits__item +.section-benefits__item{
+          margin-left: 30px;
+        }  
+    }
   }
 
   .section-benefits__img{
     @extend %flex-center;
-    
-    width: 270px;
+
+    max-width: 450px;
     height: 120px;   
     background-color: $third-background;
     border-radius: 4px;
     margin-bottom: 30px;
+    margin-top: 30px;
+
+
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
 
   }
 
@@ -35,6 +81,11 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      text-align:start;
+    }
   }
 
   .section-benefits__text {

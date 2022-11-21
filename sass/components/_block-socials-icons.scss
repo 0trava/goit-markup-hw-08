@@ -1,8 +1,10 @@
 /* БЛОК соц. мереж*/
 
 .block-socials{
-    display: inline-flex;
-    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
 
     .block-socials__icon +.block-socials__icon{
         margin-left: 10px
@@ -10,6 +12,8 @@
 
       }
 }
+
+
 
 
   .block-socials__icon{

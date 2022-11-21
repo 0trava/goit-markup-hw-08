@@ -3,8 +3,13 @@
   /* Постійні клієнти */
   
   .section-client {
-    padding-bottom: 94px;
-    padding-top: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
 
     > .container {
         display: block;
@@ -13,21 +18,29 @@
   }
 
   .section-client__title {
-    @extend %section-title;
+    @extend %section-title-mobile;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
   }
   
   
   .section-client__logo{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center
 
-    li + li{
-        margin-left: 30px ;
-    }
+    // li + li{
+    //     margin-left: 30px ;
+    // }
   }
   
   .section-client__icon{
     @extend %flex-center;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid $icon-background-1;
     border-radius: 4px;
@@ -35,6 +48,13 @@
   
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: $tablet) {
+      width: 226px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 170px;
+    }
 
     &:hover, 
     &:focus{

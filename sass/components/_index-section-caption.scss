@@ -1,22 +1,30 @@
 /* Секція - Чим ми займаємося */
 
   .section-caption{
-    padding-bottom: 94px;
+    display: none;
 
-    &--overlay{
-        position: absolute;
-        left: 50%;
-        bottom: 27px;
-        transform: translate(-50%) ;
-      
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: $second-text-color;
-      
-      }
+    @media screen and (min-width: $desktop) {
+      display: contents;
+      padding-bottom: 94px;
+
+      &--overlay{
+          position: absolute;
+          left: 50%;
+          bottom: 27px;
+          transform: translate(-50%) ;
+        
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 1.14;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $second-text-color;
+        
+        }
+
+
+    }
+
   }
 
 

@@ -1,22 +1,46 @@
 
 header {
     background-color: $second-text-color;
+
 }
 
 /* Site nav */
 
 .header-nav{
     display: flex;
-    align-items: center;  
+    align-items: center;
+    height: 60px;  
+
+    @media screen and (min-width: $tablet) {
+      height: 80px;  
+    }
 }
 
   .header-nav__pagination{
-      display: flex;
-      margin-left: 93px;
-      margin-right: 318px;
+      // display: flex;
+      display: none;
+
+
+
+
+      @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-left: 88px;
+        margin-right: 96px;
+      }
+
+      @media screen and (min-width: $desktop ) {
+        display: flex;
+        margin-left: 93px;
+        margin-right: 318px;
+      }
+
+
 
       .header-nav__item + .header-nav__item {
+        
         margin-left: 50px;
+        
     }
 
     .header-nav__link {
@@ -28,10 +52,15 @@ header {
 
         text-decoration: none;  
         font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14; 
+        font-size: 12px;
+        line-height: calc(14/12);
         letter-spacing: 0.02em;  
 
+
+        @media screen and(min-width: $desktop) {
+          font-size: 14px;
+          line-height: 1.14; 
+        }
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
@@ -68,16 +97,42 @@ header {
  /* Контакти */
 
 .header-nav__adr{
-@extend %inline-flex-center;
+  display: none;
 
-    li + li {
-        margin-left: 30px;
-      }
+  li + li {
+
+    @media screen and (min-width: $tablet) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: 30px;
+      margin-top: 0px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   }
 
   
 .header-nav__item {
   @extend %inline-flex-center;
+
+
 }
   
 .header-nav__link {
@@ -89,9 +144,14 @@ header {
     font-style: normal;
     align-items: center;
     font-weight: 500; 
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;  
     letter-spacing: 0.02em;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;  
+    }
   
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -111,4 +171,12 @@ header {
     .header-nav--line{
       border: 1px solid $border;
     } 
+
+    .header-nav >.menu_button {
+      margin-right: 0px;
+      margin-left: 276px;
+
+    }
+
+
 

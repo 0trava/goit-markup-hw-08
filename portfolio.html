@@ -19,14 +19,28 @@
 <header>
     <nav>
     <div class="container header-nav">
-    <!-- <nav> -->
+
         <a href="./index.html" class="logo"><span class="logo-span">Web</span>Studio</a>
+       
+       
+       
+        <button data-menu-open type="button" class="menu_button">
+            <svg 
+            width="40px"
+            height="40px"
+            aria-label="Перемикач мобільного меню">
+        <use class="icon_menu"  href="./images/icons.svg#menu_40px"></use>
+        </svg>
+        </button>
+
+
+
         <ul class="header-nav__pagination">
             <li class="header-nav__item"><a href="./index.html" class="header-nav__link">Студія</a></li>
-            <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link header-nav--open">Портфоліо</a></li>
+            <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link  header-nav--open">Портфоліо</a></li>
             <li class="header-nav__item"><a href="" class="header-nav__link">Контакти</a></li>
         </ul>
-    <!-- </nav> -->
+
         <ul class="header-nav__adr">
             <li class="header-nav__item">
                     <a href="mailto:info@devstudio.com" class="header-nav__link">
@@ -47,8 +61,49 @@
         </ul> 
     </div>
     </nav> 
-<div class="header-nav--line"></div>
-
+<div data-menu is-hidden class="mob-menu is-hidden">
+    <div class="mob-container">
+        <div class="mob-menu__top">
+            <div class="menu_button">
+            <button data-menu-close type="button" class="menu_button-close">
+                <svg 
+                width="40px"
+                height="40px"
+                aria-label="Перемикач мобільного меню">
+            <use class="icon_cross" href="./images/icons.svg#close_40px"></use>
+            </svg>
+            </button>
+            </div>
+    
+            <ul class="mob-nav__pagination">
+                <li class="mob-nav__item"><a href="./index.html">Студія</a></li>
+                <li class="mob-nav__item mob--open"><a href="./portfolio.html">Портфоліо</a></li>
+                <li class="mob-nav__item"><a href="">Контакти</a></li>
+            </ul>
+        </div>
+        <div class="mob-menu__bottom">
+            <ul class="mob-menu-adr__list">
+                <li ><a href="tel:+38096111111" class="mob-menu__tel">+38 096 111 11 11</a></li>
+                <li ><a href="mailto:info@devstudio.com" class="mob-menu__mail">info@devstudio.com</a></li>
+            </ul>  
+    
+            <ul class="mob-soc_list">
+                <li>
+                    <a href="" class="mob-soc_item">Instagram</a>
+                </li>
+                <li>
+                    <a href="" class="mob-soc_item">Twitter</a>
+                </li>
+                <li>
+                    <a href="" class="mob-soc_item">Facebook</a>
+                </li>
+                <li>
+                    <a href="" class="mob-soc_item">LinkedIn</a>    
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>    
 </header>
 
 <main>
@@ -72,7 +127,29 @@
             <a href="" class="section-portfolio__link">
 
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio1.jpg" alt="portfolio1" width="370" class="tt">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio1.jpg 1x,
+                        ./images/portfolio/portfolio-1-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-1-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-1-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-1-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-1-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio1.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
+
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -91,7 +168,28 @@
             <a href="" class="section-portfolio__link">
 
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio2.jpg" alt="portfolio2" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio2.jpg 1x,
+                        ./images/portfolio/portfolio-2-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-2-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-2-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-2-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-2-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio2.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -111,7 +209,28 @@
             <a href="" class="section-portfolio__link">
 
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio3.jpg" alt="portfolio3" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio3.jpg 1x,
+                        ./images/portfolio/portfolio-3-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-3-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-3-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-3-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-3-mob-1x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio3.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -131,7 +250,28 @@
             <a href="" class="section-portfolio__link">
 
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio4.jpg" alt="portfolio4" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio4.jpg 1x,
+                        ./images/portfolio/portfolio-4-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-4-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-4-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-4-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-4-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio4.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -151,7 +291,28 @@
             
             <a href="" class="section-portfolio__link">
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio5.jpg" alt="portfolio5" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio5.jpg 1x,
+                        ./images/portfolio/portfolio-5-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-5-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-5-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-5-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-5-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio5.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -171,7 +332,28 @@
             
             <a href="" class="section-portfolio__link">
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio6.jpg" alt="portfolio6" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio6.jpg 1x,
+                        ./images/portfolio/portfolio-6-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-6-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-6-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-6-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-6-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio6.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -190,7 +372,28 @@
         
             <a href="" class="section-portfolio__link">
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio7.jpg" alt="portfolio7" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio7.jpg 1x,
+                        ./images/portfolio/portfolio-7-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-7-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-7-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-7-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-7-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio7.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -209,7 +412,28 @@
 
             <a href="" class="section-portfolio__link">
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio8.jpg" alt="portfolio8" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio8.jpg 1x,
+                        ./images/portfolio/portfolio-8-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-8-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-8-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-8-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-8-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio8.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -229,7 +453,28 @@
 
             <a href="" class="section-portfolio__link">
                 <div class="section-portfolio__box">
-                    <img src="./images/portfolio9.jpg" alt="portfolio9" width="370">
+                    <picture>
+                        <source
+                        srcset="./images/portfolio/portfolio9.jpg 1x,
+                        ./images/portfolio/portfolio-9-desk-2x.jpg 2x" 
+                        media="(min-width: 1200px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-9-tab-1x.jpg 1x,
+                        ./images/portfolio/portfolio-9-tab-2x.jpg 2x" 
+                        media="(min-width: 768px)"
+                        />
+                        <source
+                        srcset="./images/portfolio/portfolio-9-mob-1x.jpg 1x,
+                        ./images/portfolio/portfolio-9-mob-2x.jpg 2x" 
+                        media="(min-width: 320px)"
+                        />
+                        <img
+                        src="./images/portfolio/portfolio9.jpg" 
+                        alt="portfolio1" 
+                        width="450" 
+                        class="tt">
+                    </picture>
                     <div class="section-portfolio--overlay" >
                         <p>Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div>
@@ -252,7 +497,7 @@
 <!-- Футер -->
 <footer class="footer">
     <div class="container">
-        <div>
+        <div class="footer_logo">
             <a href="./index.html" class="logo foot-web"><span class="logo-span">Web</span>Studio</a>
             <address>
                 <ul class="footer__list">
@@ -304,5 +549,6 @@
     </div>
 </footer>
 
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>

@@ -20,14 +20,28 @@
 <header>
         <nav>
         <div class="container header-nav">
-        <!-- <nav> -->
+
             <a href="./index.html" class="logo"><span class="logo-span">Web</span>Studio</a>
+           
+           
+           
+            <button data-menu-open type="button" class="menu_button">
+                <svg 
+                width="40px"
+                height="40px"
+                aria-label="Перемикач мобільного меню">
+            <use class="icon_menu"  href="./images/icons.svg#menu_40px"></use>
+            </svg>
+            </button>
+
+
+
             <ul class="header-nav__pagination">
                 <li class="header-nav__item"><a href="./index.html" class="header-nav__link header-nav--open">Студія</a></li>
                 <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link">Портфоліо</a></li>
                 <li class="header-nav__item"><a href="" class="header-nav__link">Контакти</a></li>
             </ul>
-        <!-- </nav> -->
+
             <ul class="header-nav__adr">
                 <li class="header-nav__item">
                         <a href="mailto:info@devstudio.com" class="header-nav__link">
@@ -48,18 +62,65 @@
             </ul> 
         </div>
         </nav> 
+    <div data-menu is-hidden class="mob-menu is-hidden">
+        <div class="mob-container">
+            <div class="mob-menu__top">
+                <div class="menu_button">
+                <button data-menu-close type="button" class="menu_button-close">
+                    <svg 
+                    width="40px"
+                    height="40px"
+                    aria-label="Перемикач мобільного меню">
+                <use class="icon_cross" href="./images/icons.svg#close_40px"></use>
+                </svg>
+                </button>
+                </div>
+        
+                <ul class="mob-nav__pagination">
+                    <li class="mob-nav__item mob--open"><a href="./index.html">Студія</a></li>
+                    <li class="mob-nav__item"><a href="./portfolio.html">Портфоліо</a></li>
+                    <li class="mob-nav__item"><a href="">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="mob-menu__bottom">
+                <ul class="mob-menu-adr__list">
+                    <li ><a href="tel:+38096111111" class="mob-menu__tel">+38 096 111 11 11</a></li>
+                    <li ><a href="mailto:info@devstudio.com" class="mob-menu__mail">info@devstudio.com</a></li>
+                </ul>  
+        
+                <ul class="mob-soc_list">
+                    <li>
+                        <a href="" class="mob-soc_item">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-soc_item">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-soc_item">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-soc_item">LinkedIn</a>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </div>    
 </header>
 
 <div class="container"></div>
 
 <main>
     <!--головний банер-->
-    <section class="section-hero">
-        <div class="section-hero--center">
-        <h1 class="section-hero__title">Ефективні рішення для<br/> вашого бізнесу</h1>
-        <button type="button" class="section-hero__button" data-modal-open>Замовити послугу</button>
-        </div>
-    </section>
+        <section class="section-hero">
+            <div class="section-hero--center">
+            <h1 class="section-hero__title">Ефективні рішення для<br/> вашого бізнесу</h1>
+            <button type="button" class="section-hero__button" data-modal-open>Замовити послугу</button>
+            </div>
+        </section>
     <!--Головні переваги-->
 
     <section class="section-benefits">
@@ -114,7 +175,10 @@
         <ul class="section-caption__img">
             <li class="section-caption__item">
                 <div class="section-caption__box">
-                    <img src="./images/apply-robot1.jpg" alt="приклади робіт 1" width="370">
+                    <img
+                    srcset="./images/apply-robot1.jpg 1x,
+                    ./images/apply-robot1-2x.jpg 2x"
+                     src="./images/apply-robot1.jpg" alt="приклади робіт 1" width="370">
                     <div class="section-caption--overlay">
                         <p>Десктопні додатки</p>
                     </div>
@@ -123,7 +187,10 @@
 
             <li class="section-caption__item">
                 <div class="section-caption__box">
-                    <img src="./images/apply-robot2.jpg" alt="приклади робіт 2" width="370">
+                    <img
+                    srcset="./images/apply-robot2.jpg 1x,
+                    ./images/apply-robot2-2x.jpg 2x"
+                    src="./images/apply-robot2.jpg" alt="приклади робіт 2" width="370">
                     <div class="section-caption--overlay">
                         <p>Мобільні додатки</p>
                     </div>
@@ -132,7 +199,10 @@
             
             <li class="section-caption__item">
                 <div class="section-caption__box">
-                    <img src="./images/apply-robot3.jpg" alt="приклади робіт 3" width="370">
+                    <img
+                    srcset="./images/apply-robot3.jpg 1x,
+                    ./images/apply-robot3-2x.jpg 2x"
+                    src="./images/apply-robot3.jpg" alt="приклади робіт 3" width="370">
                     <div class="section-caption--overlay">
                         <p>Дизайнерські рішення</p>
                     </div>
@@ -150,7 +220,10 @@
         <h2 class="section-teem__title">Наша команда</h2>
         <ul class="section-teem__list">
             <li class="section-teem__item">
-                <img src="./images/photo-ihor-demyanenko.jpg" alt="фото Ігор Дем'яненко" width="270" >
+                <img
+                srcset="./images/photo-ihor-demyanenko.jpg 1x,
+                ./images/photo-ihor-demyanenko-2x.jpg 2x/" 
+                src="./images/photo-ihor-demyanenko.jpg" alt="фото Ігор Дем'яненко" >
                 <div class="section-teem__blok">
                     <h3 class="section-teem__lead">Ігор Дем'яненко</h3>
                     <p class="section-teem__post">Product Designer</p>
@@ -180,7 +253,10 @@
             </li>
 
             <li class="section-teem__item">
-                <img src="./images/photo-olga-repina.jpg" alt="фото Ольга Рєпіна" width="270" >
+                <img
+                srcset="./images/photo-olga-repina.jpg 1x,
+                ./images/photo-olga-repina-2x.jpg 2x" 
+                src="./images/photo-olga-repina.jpg" alt="фото Ольга Рєпіна" >
                 <div class="section-teem__blok">
                     <h3 class="section-teem__lead">Ольга Рєпіна</h3>
                     <p class="section-teem__post">Frontend Developer</p>
@@ -211,7 +287,10 @@
 
             <li class="section-teem__item">
                 
-                <img src="./images/photo-mykola-tarasov.jpg" alt="фото Микола Тарасов" width="270" >
+                <img 
+                srcset="./images/photo-mykola-tarasov.jpg 1x,
+                ./images/photo-mykola-tarasov-2x.jpg 2x" 
+                src="./images/photo-mykola-tarasov.jpg" alt="фото Микола Тарасов" >
                 <div class="section-teem__blok">
                     <h3 class="section-teem__lead">Микола Тарасов</h3>
                     <p class="section-teem__post">Marketing</p>
@@ -242,7 +321,10 @@
             
             <li class="section-teem__item">
                 
-                <img src="./images/photo-mykhailo-yermakov.jpg" alt="фото Михайло Єрмаков" width="270" >
+                <img
+                srcset="./images/photo-mykhailo-yermakov.jpg 1x,
+                ./images/photo-mykhailo-yermakov-2x.jpg 2x" 
+                src="./images/photo-mykhailo-yermakov.jpg" alt="фото Михайло Єрмаков">
                 <div class="section-teem__blok">
                     <h3 class="section-teem__lead">Михайло Єрмаков</h3>
                     <p class="section-teem__post">UI Designer</p>
@@ -331,7 +413,7 @@
 <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <div>
+            <div class="footer_logo">
                 <a href="./index.html" class="logo foot-web"><span class="logo-span">Web</span>Studio</a>
                 <address>
                     <ul class="footer__list">
@@ -476,5 +558,6 @@
 
     
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

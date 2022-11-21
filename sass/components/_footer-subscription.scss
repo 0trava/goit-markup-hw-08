@@ -1,8 +1,17 @@
  /* підпишись на розсилку */
  .subscription{
-    display: block ;
-    margin-left: 93px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    // margin-left: 93px;
     margin-top: 12px;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      margin-left: 93px;
+      justify-content: start;
+      text-align: start;
+    }
     
   }
 
@@ -18,15 +27,36 @@
     }
   
   .subscription__blok{
-    display: flex;
+    display: block;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: inherit;
+
+    }
   }
   
   .subscription__form{
     padding-left: 16px;
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 358px;
+    min-width: 200px;
+    max-width: 450px;
     margin-top: 20px;
+
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+      }
+
+    @media screen and (min-width: $desktop) {
+    width: 358px;
+    }
   
     background-color: $second-background;
     border: 1px solid rgba(255, 255, 255, 0.3);
