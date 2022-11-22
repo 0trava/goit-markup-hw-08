@@ -15,6 +15,7 @@
     background: $third-background;
     padding-top: 60px;
     padding-bottom: 60px;
+    min-width: 320px;
 
     @media screen and (min-width: $desktop) {
       padding-top: 94px;

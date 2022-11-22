@@ -76,6 +76,7 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 320px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -409,6 +410,7 @@ header {
 
 /* Головний банер */
 .section-hero {
+  min-width: 320px;
   max-width: 480px;
   height: 400px;
   margin-left: auto;
@@ -668,6 +670,7 @@ header {
   background: #F5F4FA;
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 320px;
 }
 @media screen and (min-width: 1200px) {
   .section-teem {
@@ -861,6 +864,7 @@ header {
   background-color: rgb(47, 48, 58);
   padding-top: 60px;
   padding-bottom: 60px;
+  min-width: 320px;
 }
 @media screen and (min-width: 1200px) {
   .footer {
