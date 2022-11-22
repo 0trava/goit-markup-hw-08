@@ -6,7 +6,13 @@
     // margin-left: 93px;
     margin-top: 12px;
 
+    @media screen and (min-width: $tablet) {
+      margin-top: 60px;
+
+    }
+
     @media screen and (min-width: $desktop) {
+      margin-top: 12px;
       display: flex;
       margin-left: 93px;
       justify-content: start;

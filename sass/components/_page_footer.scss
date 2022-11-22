@@ -118,6 +118,15 @@
         letter-spacing: 0.03em;
         line-height: 1.14;
         color: $second-text-color;
+
+
+        @media screen and (min-width:$desktop) {
+          justify-content: start;
+          padding-left: auto;
+
+        }
+
+
         }
 
     > .block-socials {

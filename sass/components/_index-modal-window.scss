@@ -30,10 +30,10 @@
     top: 50%;
     left: 50%;  
       
-    min-width: 450px;
-    min-height: 609px;
+    width: 450px;
+    max-height: 609px;
 
-    @media screen and (min-width: $tablet) {      
+    @media screen and (min-width: $desktop) {      
       min-width: 528px;
       min-height: 581px;
     }

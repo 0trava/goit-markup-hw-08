@@ -1,8 +1,11 @@
 /* --------Форма: Залиште свої дані ------------*/
 
 .form{
-    width: 448px;
+    min-width: 370px;
+    max-width: 448px;
     margin: 40px;
+
+    
 
     a {
         text-decoration: none;
@@ -56,10 +59,17 @@
     padding-bottom: 12px;
     padding-left: 16px;
     padding-right: 16px;
+    margin-top: 4px;
    
     resize: none; 
-    width: 448px;
+    min-width: 370px;
+    max-width: 448px;
     height: 120px;
+
+
+    @media screen and (min-width: $desktop) {
+      width: 448px;
+    }
   
     font-weight: 400;
     font-size: 12px;
@@ -93,6 +103,8 @@
 .form-comment{
     display: flex;
     flex-direction: column;
+
+
 }
   
  
@@ -102,7 +114,13 @@
     flex-direction: column;
 
     input{
+      min-width: 370px;
+      max-width: 448px;
+
+      @media screen and (min-width: $desktop) {
         width: 448px;
+      }
+
       }
 
     svg {
@@ -133,14 +151,19 @@
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
-  
+    font-size: 12px;
+    line-height: calc(14/12);
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+
     letter-spacing: 0.03em;
   
     color: $title-text-color;
     appearance: none;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
 
     > label{
         @extend %flex-center;
@@ -148,8 +171,13 @@
 
     a {
         font-weight: 400;
-        font-size: 14px;
-        line-height: 1.71;
+        font-size: 12px;
+        line-height: calc(14/12);
+
+        @media screen and (min-width: $desktop) {
+          font-size: 14px;
+          line-height: 1.71;
+        }
       
         letter-spacing: 0.03em;
         color: $form-second-color;

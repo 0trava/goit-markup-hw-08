@@ -51,6 +51,9 @@
     @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
+      .section-teem__item:nth-child(1n){
+        margin-top: 0;
+      }
 
       .section-teem__item:nth-child(2n){
         margin-left: 30px;
